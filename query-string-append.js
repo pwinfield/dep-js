@@ -1,5 +1,21 @@
-window.onload = () => {
+const mainContainer = document.getElementById('main');
+
+if (mainContainer) {
+  const observer = new MutationObserver((mutationsList, observer) => {
+    if (mainContainer.querySelector('#67d21fe151ed7')) {
+      observer.disconnect();
+      console.log('Ceros Experience loaded!');
+      queryStringAppendFunction();
+    }
+  });
+
+  observer.observe(mainContainer, { childList: true, subtree: true });
+}
+
+function queryStringAppendFunction() {
   const link = document.getElementById('67d21fe151ed7');
+
+  console.log('Link found:', link);
 
   if (link) {
     link.addEventListener('click', function (event) {
