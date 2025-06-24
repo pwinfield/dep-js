@@ -33,4 +33,3 @@ function queryStringAppendFunction(link) {
     window.location.href = url.toString();
   });
 }
-}
